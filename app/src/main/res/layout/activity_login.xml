@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <include layout="@layout/common_titlebar"/>
+
+    <LinearLayout
+        style="@style/styleBaseMW"
+        android:paddingLeft="@dimen/homePaddingLR"
+        android:paddingRight="@dimen/homePaddingLR"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/styleBaseWW"
+            android:text="@string/txtConfirm"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/editPhontNumber"
+            style="@style/styleBaseMW"
+            android:background="@drawable/shape_edit_bg"
+            android:padding="8dp"
+            android:gravity="center"
+            android:hint="Input your phone number."
+            />
+
+        <android.support.v4.widget.Space
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimenBtnSpace" />
+
+        <LinearLayout
+            style="@style/styleBaseMW"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+            <Button
+                android:id="@+id/btnGetConfirmation"
+                style="@style/styleCommonBtn"
+                android:layout_gravity="center_horizontal"
+                android:text= "@string/btnConfirmCode"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

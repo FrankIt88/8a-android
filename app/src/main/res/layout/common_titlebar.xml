@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorTitleBG"
+    android:padding="8dp">
+    
+    <TextView
+        android:id="@+id/txtTitle"
+        style="@style/styleBaseWW"
+        android:layout_centerVertical="true"
+        android:textColor="@color/colorPrimary"
+        android:text="WWW"
+        android:textStyle="bold"
+        />
+    
+    <ImageView
+        android:id="@+id/imgLogOut"
+        android:layout_width="@dimen/titlebarImgSize"
+        android:layout_height="@dimen/titlebarImgSize"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_logout"/>
+
+</RelativeLayout>

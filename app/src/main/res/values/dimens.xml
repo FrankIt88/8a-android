@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="titlebarImgSize">20dp</dimen>
+
+    <dimen name="dimenBtnMarginLR">60dp</dimen>
+    <dimen name="dimenBtnSpace">30dp</dimen>
+
+    <!-- Home Activity -->
+    <dimen name="homePaddingLR">20dp</dimen>
+</resources>

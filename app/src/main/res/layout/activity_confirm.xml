@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <include layout="@layout/common_titlebar"/>
+
+    <LinearLayout
+        style="@style/styleBaseMW"
+        android:paddingLeft="@dimen/homePaddingLR"
+        android:paddingRight="@dimen/homePaddingLR"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/styleBaseWW"
+            android:text="@string/txtConfirmReceive"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            style="@style/styleBaseMW"
+            android:background="@drawable/shape_edit_bg"
+            android:padding="8dp"
+            android:gravity="center"
+            android:hint="Input your confirmation code."
+            android:layout_marginBottom="12dp"
+            />
+
+        <TextView
+            style="@style/styleBaseWW"
+            android:text="@string/txtConfirmReceive"
+            android:textColor="#F00"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            style="@style/styleBaseMW"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btnConfirmNext"
+                style="@style/styleCommonBtn"
+                android:layout_gravity="center_horizontal"
+                android:text= "@string/btnNext"/>
+
+            <android.support.v4.widget.Space
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+
+            <Button
+                android:id="@+id/btnConfirmNotReceived"
+                style="@style/styleCommonBtn"
+                android:layout_gravity="center_horizontal"
+                android:text= "@string/btnNotReceive"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

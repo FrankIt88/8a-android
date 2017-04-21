@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/titleBar"
+        style="@style/styleBaseMW"
+        android:background="@color/colorTitleBG"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/styleBaseWW"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorPrimary"
+            android:text="WWL"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:id="@+id/imgAlert"
+            android:layout_width="@dimen/titlebarImgSize"
+            android:layout_height="@dimen/titlebarImgSize"
+            android:src="@drawable/ic_alert"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@+id/imgProfile"/>
+
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="@dimen/titlebarImgSize"
+            android:layout_height="@dimen/titlebarImgSize"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_profile"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/contentPane"
+        style="@style/styleBaseMM"
+        android:layout_below="@+id/titleBar"
+        android:layout_above="@+id/bottomBtn">
+
+        <LinearLayout
+            style="@style/styleBaseMW"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                style="@style/styleBaseWW"
+                android:text="My Profile"
+                android:textSize="20dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"/>
+
+            <!-- Profile Photo -->
+            <RelativeLayout
+                style="@style/styleBaseMW"
+                android:layout_marginBottom="12dp">
+                
+                <ImageView
+                    android:id="@+id/imgIconPhoto"
+                    style="@style/styleProfileIcon"
+                    android:src="@drawable/ic_cancel"
+                    android:layout_marginRight="8dp"/>
+
+                <TextView
+                    android:id="@+id/txtPhoto"
+                    style="@style/styleBaseWW"
+                    android:text="Profile Photo"
+                    android:layout_alignTop="@+id/imgIconPhoto"
+                    android:layout_alignBottom="@+id/imgIconPhoto"
+                    android:layout_toRightOf="@+id/imgIconPhoto"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_alignLeft="@+id/txtPhoto"
+                    android:layout_below="@+id/txtPhoto"
+                    android:layout_marginTop="8dp"
+                    />
+                
+            </RelativeLayout>
+
+            <!-- Name -->
+            <RelativeLayout
+                style="@style/styleBaseMW"
+                android:layout_marginBottom="12dp">
+
+                <ImageView
+                    android:id="@+id/imgIconName"
+                    style="@style/styleProfileIcon"
+                    android:src="@drawable/ic_cancel"
+                    android:layout_marginRight="8dp"/>
+
+                <TextView
+                    android:id="@+id/txtName"
+                    style="@style/styleBaseWW"
+                    android:text="Name"
+                    android:layout_alignTop="@+id/imgIconName"
+                    android:layout_alignBottom="@+id/imgIconName"
+                    android:layout_toRightOf="@+id/imgIconName"
+                    android:gravity="center"/>
+
+                <EditText
+                    style="@style/styleBaseMW"
+                    android:background="@drawable/shape_edit_bg"
+                    android:layout_alignLeft="@+id/txtName"
+                    android:layout_below="@+id/txtName"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    />
+
+            </RelativeLayout>
+
+
+            <!-- Bio -->
+            <RelativeLayout
+                style="@style/styleBaseMW"
+                android:layout_marginBottom="12dp">
+
+                <ImageView
+                    android:id="@+id/imgIconBio"
+                    style="@style/styleProfileIcon"
+                    android:src="@drawable/ic_cancel"
+                    android:layout_marginRight="8dp"/>
+
+                <TextView
+                    android:id="@+id/txtBio"
+                    style="@style/styleBaseWW"
+                    android:text="Bio"
+                    android:layout_alignTop="@+id/imgIconBio"
+                    android:layout_alignBottom="@+id/imgIconBio"
+                    android:layout_toRightOf="@+id/imgIconBio"
+                    android:gravity="center"/>
+
+                <EditText
+                    style="@style/styleBaseMW"
+                    android:layout_height="120dp"
+                    android:background="@drawable/shape_edit_bg"
+                    android:layout_alignLeft="@+id/txtBio"
+                    android:layout_below="@+id/txtBio"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    />
+
+            </RelativeLayout>
+
+            <!-- Log out -->
+            <RelativeLayout
+                style="@style/styleBaseWW"
+                android:clickable="true"
+                android:background="@drawable/ripple_btn_red"
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+                android:elevation="3dp"
+                android:translationZ="3dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/btnLogOut"
+                    style="@style/styleBaseWW"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_logout"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="8dp"
+                        />
+                    <TextView
+                        style="@style/styleBaseWW"
+                        android:text="Log Out"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@android:color/black"/>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomBtn"
+        style="@style/styleBaseMW"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            style="@style/styleCommonBtn"
+            android:background="@drawable/ripple_btn_blue"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+
+            android:layout_weight="1"
+            android:text="Cancel"/>
+
+        <RelativeLayout
+            style="@style/styleCommonBtn"
+            android:background="@drawable/ripple_btn_blue"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:clickable="true"
+            >
+            <LinearLayout
+                style="@style/styleBaseWW"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_cloud"
+                    android:layout_marginRight="6dp"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    style="@style/styleBaseWW"
+                    android:layout_gravity="center_vertical"
+                    android:text="Save"
+                    android:textColor="@android:color/black"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

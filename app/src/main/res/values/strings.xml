@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">8a-android</string>
+
+    <!--Home Activity -->
+    <string name="watchNews">Watch News</string>
+    <string name="reportNews">Report News</string>
+
+    <!-- Confirm Activity -->
+    <string name="txtConfirm">Please sign in to WWL. You will be texted a confirmation code.</string>
+    <string name="btnConfirmCode">Get Confirmation Code</string>
+
+    <!-- Confirm Receive Activity -->
+    <string name="txtConfirmReceive">We just texted you a confirmation code.\n Please enter it below.</string>
+    <string name="btnNext">Next ></string>
+    <string name="btnNotReceive">I did not receive it.</string>
+    <string name="txtConfirmError">That confirmation code did not match. Please try again.</string>
 </resources>
